@@ -36,23 +36,27 @@
 
 int main(int argc, char** argv)
 {
-  // Read command lines arguments.
   QApplication application(argc,argv);
 
   glutInit(&argc, argv);
 
-  QMainWindow* mainWindow = new QMainWindow;
-  Ui_MainWindow form1;
-  form1.setupUi(mainWindow);
+  QMainWindow* mainWindow = new QMainWindow();
 
-  // Instantiate and layout the viewer.
-  Viewer *v = new Viewer();
-  QLayout *layout = new QHBoxLayout;
-  layout->addWidget(v);
-  form1.frame->setLayout(layout);
+  // **********************************************
+  // Instanciates window's components
+  // **********************************************
+      Ui_MainWindow form1;
+      form1.setupUi(mainWindow);
+
+      Viewer* viever = new Viewer();
+
+      QLayout* layout = new QHBoxLayout;
+      layout->addWidget(viever);
+
+      form1.frame->setLayout(layout);
 
   mainWindow->show();
 
-  // Run main loop.
+  // Runs application's loop
   return application.exec();
 }

@@ -4,8 +4,18 @@ TARGET   = simpleViewer
 # Add your .ui file here
 FORMS += untitled.ui
 
-HEADERS  = simpleViewer.h
-SOURCES  = simpleViewer.cpp main.cpp
+HEADERS = simpleViewer.h \
+    treeItem.h \
+    sceneObjects/sceneObject.h \
+    sceneObjects/rectangle.h \
+    sceneObjects/text.h \
+    vectorGLf.h
+SOURCES = main.cpp \
+    simpleViewer.cpp \
+    treeItem.cpp \
+    sceneObjects/sceneObject.cpp \
+    sceneObjects/rectangle.cpp \
+    sceneObjects/text.cpp
 
 QT *= xml opengl
 
@@ -49,3 +59,5 @@ unix {
     LIBS += -L$${LIB_DIR} -l$${LIB_FILE}
   }
 }
+
+DISTFILES +=
