@@ -23,6 +23,9 @@
 #include "simpleViewer.h"
 #include "sceneObjects/text.h"
 #include "sceneObjects/rectangle.h"
+#include "sceneObjects/polygon.h"
+#include "sceneObjects/transformations/translation.h"
+#include "sceneObjects/transformations/scaling.h"
 
 #include <qgl.h>
 #define GLUT_DISABLE_ATEXIT_HACK
@@ -37,18 +40,40 @@ using namespace std;
 
 void Viewer::draw()
 {
+    glPushMatrix();
+
+    //TODO
+    // link transformation to shape's center
+    scaling* s = new scaling();
+    s->getVector()->x = 1.5;
+    s->getVector()->y = 0.5;
+    s->render();
+
+    translation* tn = new translation();
+    tn->getVector()->x = 10;
+    tn->render();
+
+    polygon* p = new polygon();
+    p->setColor(vector3GLf(0, 1, 1));
+    p->addVertex(vector2Glf(0, 0));
+    p->addVertex(vector2Glf(-20, 15));
+    p->addVertex(vector2Glf(0, 30));
+    p->addVertex(vector2Glf(20, 30));
+    p->addVertex(vector2Glf(10, 15));
+    p->render();
+
+    glPopMatrix();
+
     rectangle* r = new rectangle();
+    r->setColor(vector3GLf(0, 0, 1));
     r->setCorner1(vector2Glf(35, 10));
     r->setCorner2(vector2Glf(55, -5));
     r->render();
 
     text* t = new text();
-    glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
-    t->setValue(QString("test"));
     t->setColor(vector3GLf(1, 1, 0));
+    t->setValue(QString("test"));
     t->render();
-    glPopMatrix();
 }
 
 void Viewer::drawWithNames() {

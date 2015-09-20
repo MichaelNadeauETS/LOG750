@@ -6,16 +6,24 @@ FORMS += untitled.ui
 
 HEADERS = simpleViewer.h \
     treeItem.h \
-    sceneObjects/sceneObject.h \
     sceneObjects/rectangle.h \
     sceneObjects/text.h \
-    vectorGLf.h
+    vectorGLf.h \
+    sceneObjects/sceneShape.h \
+    sceneObjects/sceneObject.h \
+    sceneObjects/polygon.h \
+    sceneObjects/transformations/translation.h \
+    sceneObjects/transformations/scaling.h \
+    sceneObjects/transformations/sceneTransformation.h
 SOURCES = main.cpp \
     simpleViewer.cpp \
     treeItem.cpp \
-    sceneObjects/sceneObject.cpp \
     sceneObjects/rectangle.cpp \
-    sceneObjects/text.cpp
+    sceneObjects/text.cpp \
+    sceneObjects/sceneShape.cpp \
+    sceneObjects/polygone.cpp \
+    sceneObjects/transformations/translation.cpp \
+    sceneObjects/transformations/scaling.cpp
 
 QT *= xml opengl
 

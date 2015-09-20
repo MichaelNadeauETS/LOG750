@@ -1,7 +1,7 @@
 #ifndef SCENETEXT_H
 #define SCENETEXT_H
 
-#include "sceneObjects/sceneObject.h"
+#include "sceneObjects/sceneShape.h"
 #include <QString>
 
 #if defined(Q_OS_WIN32) || defined(Q_OS_LINUX)
@@ -11,7 +11,7 @@
 #include "GLUT/glut.h"
 #endif
 
-class text : public sceneObject
+class text : public sceneShape
 {
     public:
         text();

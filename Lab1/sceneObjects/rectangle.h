@@ -1,9 +1,9 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "sceneObjects/sceneObject.h"
+#include "sceneObjects/sceneShape.h"
 
-class rectangle : public sceneObject
+class rectangle : public sceneShape
 {
     public:
         rectangle();

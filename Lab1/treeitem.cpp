@@ -5,7 +5,7 @@ treeItem::treeItem() {
 
 void treeItem::addChild(treeItem* item) {
     item->setParent(this);
-    this->addChild(item);
+    this->children->append(*item);
 }
 
 void treeItem::setParent(treeItem* item) {

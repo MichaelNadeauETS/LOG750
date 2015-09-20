@@ -10,6 +10,7 @@ void text::setValue(QString value) {
 void text::render() {
     super::render();
 
-    for (int i = 0; i < this->value.count(); i++)
+    for (int i = 0; i < this->value.count(); i++) {
         glutStrokeCharacter(GLUT_STROKE_ROMAN, this->value.at(i).unicode());
+    }
 }
