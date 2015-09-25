@@ -17,13 +17,13 @@ HEADERS = simpleViewer.h \
     sceneObjects/transformations/sceneTransformation.h
 SOURCES = main.cpp \
     simpleViewer.cpp \
-    treeItem.cpp \
     sceneObjects/rectangle.cpp \
     sceneObjects/text.cpp \
     sceneObjects/sceneShape.cpp \
     sceneObjects/polygone.cpp \
     sceneObjects/transformations/translation.cpp \
-    sceneObjects/transformations/scaling.cpp
+    sceneObjects/transformations/scaling.cpp \
+    sceneObjects/sceneObject.cpp
 
 QT *= xml opengl
 

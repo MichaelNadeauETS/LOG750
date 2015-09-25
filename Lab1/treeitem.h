@@ -3,21 +3,30 @@
 
 #include <QList>
 
+template <class treeItemType>
 class treeItem
 {
     public:
-        treeItem();
+        void addChild(treeItemType* item){
+            if (!this->hasChildren())
+                this->children = new QList<treeItemType*>();
 
-    protected:
-        void addChild(treeItem* item);
-        void setParent(treeItem* item);
+            this->children->append(item);
+        }
 
-        treeItem* getParent();
-        QList<treeItem>* getChildren();
+        bool hasChildren() {
+            if (this->children == 0)
+                return false;
+
+            return this->children->count() > 0;
+        }
+
+        QList<treeItemType*>* getChildren() {
+            return this->children;
+        }
 
     private:
-        treeItem* parent = 0;
-        QList<treeItem>* children = new QList<treeItem>();
+        QList<treeItemType*>* children = 0;
 
 };
 

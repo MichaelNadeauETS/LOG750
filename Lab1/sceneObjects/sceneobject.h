@@ -4,10 +4,12 @@
 #include "treeitem.h"
 #include "vectorGLf.h"
 
-class sceneObject : public treeItem
+class sceneObject : public treeItem<sceneObject>
 {
     public:
-        virtual void render() = 0;
+        sceneObject();
+
+        virtual void render();
 
 };
 

@@ -21,6 +21,7 @@
 *****************************************************************************/
 
 #include <QGLViewer/qglviewer.h>
+#include "sceneObjects/sceneObject.h"
 
 class Viewer : public QGLViewer
 {
@@ -36,4 +37,6 @@ protected :
 
 private:
   bool movingObject;
+
+  void render(sceneObject* tree);
 };
