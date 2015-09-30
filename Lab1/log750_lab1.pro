@@ -14,16 +14,19 @@ HEADERS = simpleViewer.h \
     sceneObjects/polygon.h \
     sceneObjects/transformations/translation.h \
     sceneObjects/transformations/scaling.h \
-    sceneObjects/transformations/sceneTransformation.h
+    sceneObjects/transformations/sceneTransformation.h \
+    sceneTools/sceneVisitors/sceneVistor.h \
+    sceneTools/sceneVisitors/renderer.h
 SOURCES = main.cpp \
     simpleViewer.cpp \
     sceneObjects/rectangle.cpp \
     sceneObjects/text.cpp \
     sceneObjects/sceneShape.cpp \
-    sceneObjects/polygone.cpp \
     sceneObjects/transformations/translation.cpp \
     sceneObjects/transformations/scaling.cpp \
-    sceneObjects/sceneObject.cpp
+    sceneObjects/sceneObject.cpp \
+    sceneTools/sceneVisitors/renderer.cpp \
+    sceneObjects/polygon.cpp
 
 QT *= xml opengl
 

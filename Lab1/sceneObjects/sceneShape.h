@@ -1,18 +1,17 @@
 #ifndef SCENESHAPE_H
 #define SCENESHAPE_H
 
-#include "sceneObjects/sceneobject.h"
+#include "sceneObjects/sceneObject.h"
+#include "vectorGLf.h"
 
 class sceneShape : public sceneObject
 {
     public:
         void setColor(vector3GLf color);
 
-        virtual void render();
+        void applyColor();
 
     protected:
-        typedef sceneShape super;
-
         vector3GLf color;
 
 };

@@ -12,7 +12,7 @@ class polygon : public sceneShape
 
         void addVertex(vector2Glf vertex);
 
-        virtual void render();
+        void accept(sceneVisitor* visitor);
 
     protected:
         QList<vector2Glf>* vertices = new QList<vector2Glf>();

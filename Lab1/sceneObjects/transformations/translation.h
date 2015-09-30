@@ -10,8 +10,6 @@ class translation : public sceneTransformation
 
         vector2Glf* getVector();
 
-        virtual void render();
-
     protected:
         vector2Glf* vector = new vector2Glf(0, 0);
 };

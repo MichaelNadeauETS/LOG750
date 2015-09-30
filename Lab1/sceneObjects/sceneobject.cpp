@@ -3,5 +3,5 @@
 sceneObject::sceneObject() {
 }
 
-void sceneObject::render() {
+void sceneObject::accept(sceneVisitor* visitor) {
 }

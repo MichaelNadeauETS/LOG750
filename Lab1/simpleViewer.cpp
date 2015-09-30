@@ -21,11 +21,14 @@
 *****************************************************************************/
 
 #include "simpleViewer.h"
+
 #include "sceneObjects/text.h"
 #include "sceneObjects/rectangle.h"
 #include "sceneObjects/polygon.h"
 #include "sceneObjects/transformations/translation.h"
 #include "sceneObjects/transformations/scaling.h"
+
+#include "scenetools/sceneVisitors/renderer.h"
 
 #include <qgl.h>
 #define GLUT_DISABLE_ATEXIT_HACK
@@ -85,7 +88,8 @@ void Viewer::render(sceneObject* tree) {
     if (isTransformation)
         glPushMatrix();
 
-    tree->render();
+    renderer* r = new renderer();
+    tree->accept(r);
 
     if (!tree->hasChildren())
         return;

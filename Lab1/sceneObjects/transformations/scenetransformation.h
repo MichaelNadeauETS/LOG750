@@ -2,6 +2,7 @@
 #define SCENETRANSFORMATION_H
 
 #include "sceneObjects/sceneObject.h"
+#include "vectorGLf.h"
 
 class sceneTransformation : public sceneObject
 {

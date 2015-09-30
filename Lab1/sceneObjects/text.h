@@ -18,7 +18,7 @@ class text : public sceneShape
 
         void setValue(QString value);
 
-         virtual void render();
+        void accept(sceneVisitor *visitor);
 
     protected:
         QString value;

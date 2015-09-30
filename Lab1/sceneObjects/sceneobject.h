@@ -2,14 +2,14 @@
 #define SCENEOBJECT_H
 
 #include "treeitem.h"
-#include "vectorGLf.h"
+#include "sceneTools/sceneVisitors/scenevistor.h"
 
 class sceneObject : public treeItem<sceneObject>
 {
     public:
         sceneObject();
 
-        virtual void render();
+        virtual void accept(sceneVisitor* visitor);
 
 };
 

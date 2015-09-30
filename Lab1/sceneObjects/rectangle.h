@@ -11,7 +11,7 @@ class rectangle : public sceneShape
         void setCorner1(vector2Glf corner);
         void setCorner2(vector2Glf corner);
 
-        virtual void render();
+        void accept(sceneVisitor* visitor);
 
     protected:
         vector2Glf corner1;
