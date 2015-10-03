@@ -308,7 +308,16 @@ release/main.o: main.cpp simpleViewer.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
 		sceneObjects/sceneObject.h \
 		treeitem.h \
-		sceneTools/sceneVisitors/scenevistor.h \
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		sceneObjects/sceneShape.h \
+		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h \
 		ui_untitled.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
@@ -356,8 +365,7 @@ release/main.o: main.cpp simpleViewer.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QStatusBar \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstatusbar.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QWidget \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/QBoxLayout \
-		C:/Qt/5.5/mingw492_32/include/GL/glut.h
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/simpleViewer.o: simpleViewer.cpp simpleViewer.h \
@@ -506,18 +514,17 @@ release/simpleViewer.o: simpleViewer.cpp simpleViewer.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
 		sceneObjects/sceneObject.h \
 		treeitem.h \
-		sceneTools/sceneVisitors/scenevistor.h \
-		sceneObjects/text.h \
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
 		sceneObjects/sceneShape.h \
 		vectorGLf.h \
-		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
 		sceneObjects/rectangle.h \
-		sceneObjects/polygon.h \
-		sceneObjects/transformations/translation.h \
-		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
 		sceneObjects/transformations/scaling.h \
-		scenetools/sceneVisitors/renderer.h \
-		sceneTools/sceneVisitors/sceneVistor.h
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h \
+		scenetools/sceneVisitors/renderer.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\simpleViewer.o simpleViewer.cpp
 
 release/rectangle.o: sceneObjects/rectangle.cpp sceneObjects/rectangle.h \
@@ -567,8 +574,15 @@ release/rectangle.o: sceneObjects/rectangle.cpp sceneObjects/rectangle.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h \
-		vectorGLf.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		vectorGLf.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\rectangle.o sceneObjects\rectangle.cpp
 
 release/text.o: sceneObjects/text.cpp sceneObjects/text.h \
@@ -618,8 +632,13 @@ release/text.o: sceneObjects/text.cpp sceneObjects/text.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h \
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
 		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
 		C:/Qt/5.5/mingw492_32/include/GL/glut.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\text.o sceneObjects\text.cpp
@@ -670,8 +689,16 @@ release/sceneShape.o: sceneObjects/sceneShape.cpp sceneObjects/sceneShape.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h \
-		vectorGLf.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\sceneShape.o sceneObjects\sceneShape.cpp
 
 release/translation.o: sceneObjects/transformations/translation.cpp sceneObjects/transformations/translation.h \
@@ -721,8 +748,15 @@ release/translation.o: sceneObjects/transformations/translation.cpp sceneObjects
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h \
-		vectorGLf.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		sceneObjects/sceneShape.h \
+		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\translation.o sceneObjects\transformations\translation.cpp
 
 release/scaling.o: sceneObjects/transformations/scaling.cpp sceneObjects/transformations/scaling.h \
@@ -772,8 +806,15 @@ release/scaling.o: sceneObjects/transformations/scaling.cpp sceneObjects/transfo
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h \
-		vectorGLf.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		sceneObjects/sceneShape.h \
+		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/translation.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\scaling.o sceneObjects\transformations\scaling.cpp
 
 release/sceneObject.o: sceneObjects/sceneObject.cpp sceneObjects/sceneObject.h \
@@ -821,11 +862,76 @@ release/sceneObject.o: sceneObjects/sceneObject.cpp sceneObjects/sceneObject.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		sceneObjects/sceneShape.h \
+		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\sceneObject.o sceneObjects\sceneObject.cpp
 
 release/renderer.o: sceneTools/sceneVisitors/renderer.cpp sceneTools/sceneVisitors/renderer.h \
-		sceneTools/sceneVisitors/sceneVistor.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/polygon.h \
+		sceneObjects/sceneShape.h \
+		sceneObjects/sceneObject.h \
+		treeitem.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QList \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobal.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qconfig.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qlogging.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qflags.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_gcc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv7.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv6.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_armv5.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_ia64.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_mips.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_x86.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qatomic_unix.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qmutex.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qiterator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstring.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qchar.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
+		vectorGLf.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		sceneObjects/transformations/translation.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\renderer.o sceneTools\sceneVisitors\renderer.cpp
 
 release/polygon.o: sceneObjects/polygon.cpp sceneObjects/polygon.h \
@@ -875,8 +981,15 @@ release/polygon.o: sceneObjects/polygon.cpp sceneObjects/polygon.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringlist.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qregexp.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qstringmatcher.h \
-		sceneTools/sceneVisitors/scenevistor.h \
-		vectorGLf.h
+		sceneTools/sceneVisitors/sceneVistor.h \
+		sceneObjects/rectangle.h \
+		sceneObjects/text.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/5.5/mingw492_32/include/GL/glut.h \
+		sceneObjects/transformations/scaling.h \
+		sceneObjects/transformations/sceneTransformation.h \
+		vectorGLf.h \
+		sceneObjects/transformations/translation.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\polygon.o sceneObjects\polygon.cpp
 
 ####### Install

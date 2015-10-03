@@ -49,6 +49,6 @@ void renderer::visit(scaling* s) {
     glScalef(s->vector->x, s->vector->y, 1);
 }
 
-void renderer::visit(transformation* t) {
+void renderer::visit(translation* t) {
     glTranslatef(t->vector->x, t->vector->y, 0);
 }

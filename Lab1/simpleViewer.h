@@ -25,18 +25,23 @@
 
 class Viewer : public QGLViewer
 {
-protected :
-  virtual void draw();
-  virtual void init();
-  virtual QString helpString() const;
+    public:
+        void setSceneModel(sceneObject* tree);
 
-  virtual void drawWithNames();
-  virtual void postSelection(const QPoint& point);
-  virtual void mouseMoveEvent(QMouseEvent* e);
-  virtual void mouseReleaseEvent(QMouseEvent* e);
+    protected :
+      virtual void draw();
+      virtual void init();
+      virtual QString helpString() const;
 
-private:
-  bool movingObject;
+      virtual void drawWithNames();
+      virtual void postSelection(const QPoint& point);
+      virtual void mouseMoveEvent(QMouseEvent* e);
+      virtual void mouseReleaseEvent(QMouseEvent* e);
 
-  void render(sceneObject* tree);
+    private:
+      bool movingObject;
+
+      sceneObject* model;
+
+      void render(sceneObject* tree);
 };

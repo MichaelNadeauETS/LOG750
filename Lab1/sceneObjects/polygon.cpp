@@ -7,6 +7,6 @@ void polygon::addVertex(vector2Glf vector) {
     this->vertices->append(vector);
 }
 
-void text::accept(sceneVisitor* visitor) {
+void polygon::accept(sceneVisitor* visitor) {
     visitor->visit(this);
 }

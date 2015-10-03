@@ -16,12 +16,11 @@ class text : public sceneShape
     public:
         text();
 
+        QString value;
+
         void setValue(QString value);
 
         void accept(sceneVisitor *visitor);
-
-    protected:
-        QString value;
 
 };
 

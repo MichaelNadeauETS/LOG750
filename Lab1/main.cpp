@@ -26,6 +26,12 @@
 #include <qframe.h>
 #include <QBoxLayout>
 
+#include "sceneObjects/text.h"
+#include "sceneObjects/rectangle.h"
+#include "sceneObjects/polygon.h"
+#include "sceneObjects/transformations/translation.h"
+#include "sceneObjects/transformations/scaling.h"
+
 #define GLUT_DISABLE_ATEXIT_HACK
 #if defined(Q_OS_WIN32) || defined(Q_OS_LINUX)
 #include "GL/glut.h"
@@ -42,16 +48,62 @@ int main(int argc, char** argv)
 
   QMainWindow* mainWindow = new QMainWindow();
 
+
+
+
+
+  scaling* s = new scaling();
+  s->getVector()->x = 1.5;
+  s->getVector()->y = 0.5;
+
+  translation* tn = new translation();
+  tn->getVector()->x = -20;
+  tn->getVector()->y = 15;
+
+  polygon* p = new polygon();
+  p->setColor(vector3GLf(0, 1, 1));
+  p->addVertex(vector2Glf(0, 0));
+  p->addVertex(vector2Glf(-20, 15));
+  p->addVertex(vector2Glf(0, 30));
+  p->addVertex(vector2Glf(20, 30));
+  p->addVertex(vector2Glf(10, 15));
+
+  rectangle* r = new rectangle();
+  r->setColor(vector3GLf(0, 0, 1));
+  r->setCorner1(vector2Glf(35, 10));
+  r->setCorner2(vector2Glf(55, -5));
+
+  text* t = new text();
+  t->setColor(vector3GLf(1, 1, 0));
+  t->setValue(QString("test"));
+
+
+  sceneObject* tree = new sceneObject();
+
+  tn->addChild(p);
+  s->addChild(tn);
+  tree->addChild(s);
+
+  tree->addChild(r);
+  tree->addChild(t);
+
+
+
+
+
+
+
   // **********************************************
   // Instanciates window's components
   // **********************************************
       Ui_MainWindow form1;
       form1.setupUi(mainWindow);
 
-      Viewer* viever = new Viewer();
+      Viewer* viewer = new Viewer();
+      viewer->setSceneModel(tree);
 
       QLayout* layout = new QHBoxLayout;
-      layout->addWidget(viever);
+      layout->addWidget(viewer);
 
       form1.frame->setLayout(layout);
 

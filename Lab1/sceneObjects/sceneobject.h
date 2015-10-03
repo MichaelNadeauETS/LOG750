@@ -2,7 +2,7 @@
 #define SCENEOBJECT_H
 
 #include "treeitem.h"
-#include "sceneTools/sceneVisitors/scenevistor.h"
+#include "sceneTools/sceneVisitors/sceneVistor.h"
 
 class sceneObject : public treeItem<sceneObject>
 {

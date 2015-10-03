@@ -10,12 +10,12 @@ class polygon : public sceneShape
     public:
         polygon();
 
+        QList<vector2Glf>* vertices = new QList<vector2Glf>();
+
         void addVertex(vector2Glf vertex);
 
         void accept(sceneVisitor* visitor);
 
-    protected:
-        QList<vector2Glf>* vertices = new QList<vector2Glf>();
 };
 
 #endif // POLYGONE_H

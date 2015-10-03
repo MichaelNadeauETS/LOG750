@@ -21,13 +21,7 @@
 *****************************************************************************/
 
 #include "simpleViewer.h"
-
-#include "sceneObjects/text.h"
-#include "sceneObjects/rectangle.h"
-#include "sceneObjects/polygon.h"
-#include "sceneObjects/transformations/translation.h"
-#include "sceneObjects/transformations/scaling.h"
-
+#include "sceneObjects/transformations/sceneTransformation.h"
 #include "scenetools/sceneVisitors/renderer.h"
 
 #include <qgl.h>
@@ -43,42 +37,11 @@ using namespace std;
 
 void Viewer::draw()
 {
-    scaling* s = new scaling();
-    s->getVector()->x = 1.5;
-    s->getVector()->y = 0.5;
+    render(this->model);
+}
 
-    translation* tn = new translation();
-    tn->getVector()->x = -20;
-    tn->getVector()->y = 15;
-
-    polygon* p = new polygon();
-    p->setColor(vector3GLf(0, 1, 1));
-    p->addVertex(vector2Glf(0, 0));
-    p->addVertex(vector2Glf(-20, 15));
-    p->addVertex(vector2Glf(0, 30));
-    p->addVertex(vector2Glf(20, 30));
-    p->addVertex(vector2Glf(10, 15));
-
-    rectangle* r = new rectangle();
-    r->setColor(vector3GLf(0, 0, 1));
-    r->setCorner1(vector2Glf(35, 10));
-    r->setCorner2(vector2Glf(55, -5));
-
-    text* t = new text();
-    t->setColor(vector3GLf(1, 1, 0));
-    t->setValue(QString("test"));
-
-
-    sceneObject* tree = new sceneObject();
-
-    tn->addChild(p);
-    s->addChild(tn);
-    tree->addChild(s);
-
-    tree->addChild(r);
-    tree->addChild(t);
-
-    render(tree);
+void Viewer::setSceneModel(sceneObject* tree) {
+    this->model = tree;
 }
 
 void Viewer::render(sceneObject* tree) {

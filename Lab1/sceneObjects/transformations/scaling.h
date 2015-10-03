@@ -8,10 +8,12 @@ class scaling : public sceneTransformation
     public:
         scaling();
 
+        vector2Glf* vector = new vector2Glf(1, 1);
+
         vector2Glf* getVector();
 
-    protected:
-        vector2Glf* vector = new vector2Glf(1, 1);
+        void accept(sceneVisitor *visitor);
+
 };
 
 #endif // SCALING_H
